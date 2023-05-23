@@ -13,7 +13,7 @@ module.exports = {
           primary: '#2EC4B6',
           secondary: '#FFBF69',
           accent: '#FF9F1C',
-          neutral: colors.gray[500],
+          neutral: colors.gray[600],
           'base-100': '#FFFFFF',
           info: '#63A9DE',
           success: '#1FA898',
