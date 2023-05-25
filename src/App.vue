@@ -1,10 +1,10 @@
-<script setup lang="ts">
-import LayoutBottomNavbar from '@/components/LayoutBottomNavbar.vue'
-import LayoutTopNavbar from './components/LayoutTopNavbar.vue'
+<script lang="ts" setup>
+import BottomNavigation from '@/components/layout/BottomNavigation.vue'
+import TopNavigation from '@/components/layout/TopNavigation.vue'
 </script>
 
 <template>
-  <LayoutTopNavbar />
+  <TopNavigation />
   <RouterView />
-  <LayoutBottomNavbar />
+  <BottomNavigation />
 </template>

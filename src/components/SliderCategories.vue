@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import type { Category } from '@/types'
 
 interface SliderCategoriesProps {
@@ -31,7 +31,7 @@ const CATEGORIES: Array<Category> = [
       class="badge badge-md select-none cursor-pointer carousel-item"
       :class="[
         modelValue == category
-          ? 'bg-black text-white'
+          ? 'bg-black border-black text-white'
           : 'text-neutral bg-white border-transparent hover:text-black'
       ]"
       @click="emits('update:modelValue', category)"

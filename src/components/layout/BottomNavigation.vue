@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { useRoute, RouterLink, type RouteLocationRaw } from 'vue-router'
 import BaseIcon from '@/components/BaseIcon.vue'
 import { home, squares2x2, shoppingCart, shoppingBag, user, type IconSVG } from '@/helpers/icons'
@@ -15,9 +15,9 @@ interface IconLink extends Link {
 
 const LINKS: Array<IconLink> = [
   { icon: home, label: 'Inicio', to: { name: ROUTES.HOME } },
-  { icon: squares2x2, label: 'Categorías', to: { name: '' } },
+  { icon: squares2x2, label: 'Categorías', to: { name: ROUTES.CATEGORIES } },
   { icon: shoppingCart, label: 'Carrito', to: { name: ROUTES.CARET } },
-  { icon: shoppingBag, label: 'Pedidos', to: { name: '' } },
+  { icon: shoppingBag, label: 'Pedidos', to: { name: ROUTES.ORDERS } },
   { icon: user, label: 'Cuenta', to: { name: ROUTES.USER } }
 ]
 
@@ -30,7 +30,7 @@ const route = useRoute()
       <RouterLink
         v-for="(link, index) in LINKS"
         :to="link.to"
-        class="btn btn-ghost bg-white border-transparent px-3 flex flex-col justify-center h-16"
+        class="btn btn-ghost bg-white px-3 h-16 flex flex-col justify-center hover:bg-gray-200"
         :class="link.to.name == route.name ? 'text-primary' : 'text-neutral'"
         :key="`layout-bottom-nav-icon-${index}`"
       >

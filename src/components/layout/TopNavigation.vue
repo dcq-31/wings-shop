@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { ref } from 'vue'
 import SliderCategories from '@/components/SliderCategories.vue'
 import BaseIcon from '@/components/BaseIcon.vue'
@@ -12,7 +12,9 @@ const categoryActive = ref<Category>('Todo')
   <div class="fixed top-0 w-full bg-white z-10">
     <div class="px-2">
       <div class="flex items-center justify-between py-2 px-1 mb-1">
-        <div class="btn btn-sm btn-ghost text-black text-lg font-semibold tracking-wide">
+        <div
+          class="btn btn-sm btn-ghost text-black text-lg font-semibold tracking-wide hover:bg-gray-200"
+        >
           <span class="text-primary">W</span>
           ings
         </div>

@@ -10,14 +10,13 @@ module.exports = {
     themes: [
       {
         light: {
-          primary: '#2EC4B6',
-          secondary: '#FFBF69',
-          accent: '#FF9F1C',
-          neutral: colors.gray[600],
-          'base-100': '#FFFFFF',
+          primary: '#ef8354',
+          secondary: '#637492',
+          accent: '#2d3142',
+          neutral: '#707575',
           info: '#63A9DE',
-          success: '#1FA898',
-          warning: '#BC9106',
+          success: '#24de4b',
+          warning: '#ffd633',
           error: '#F20D2B'
         }
       }
