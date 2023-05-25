@@ -25,29 +25,18 @@ const route = useRoute()
 </script>
 
 <template>
-  <div class="fixed bottom-0 w-full bg-white border-t z-10">
-    <nav class="flex justify-center mx-auto">
+  <div class="fixed bottom-0 w-full bg-white z-10 overflow-auto">
+    <nav class="flex justify-between max-w-sm mx-auto">
       <RouterLink
-        :to="link.to"
-        class="btn btn-ghost px-3 flex flex-col relative justify-center h-16"
         v-for="(link, index) in LINKS"
+        :to="link.to"
+        class="btn btn-ghost bg-white border-transparent px-3 flex flex-col justify-center h-16"
+        :class="link.to.name == route.name ? 'text-primary' : 'text-neutral'"
         :key="`layout-bottom-nav-icon-${index}`"
       >
-        <!-- Floating Active Icon -->
-        <div
-          v-if="link.to.name == route.name"
-          class="p-2 ring-2 ring-white rounded-full w-min bg-primary -top-5 shadow-md absolute left-0 right-0 mx-auto z-20"
-        >
-          <BaseIcon v-bind="link.icon" class="mx-auto text-white w-6 h-6" />
-        </div>
+        <BaseIcon v-bind="link.icon" class="mx-auto mb-2 w-5 h-5" />
 
-        <BaseIcon
-          v-bind="link.icon"
-          :class="{ invisible: link.to.name == route.name }"
-          class="mx-auto mb-2 w-5 h-5 text-neutral"
-        />
-
-        <div class="text-xs text-center text-neutral">{{ link.label }}</div>
+        <div class="text-xs text-center">{{ link.label }}</div>
       </RouterLink>
     </nav>
   </div>
