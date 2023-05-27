@@ -6,4 +6,8 @@
   .btn {
     @apply no-animation normal-case font-normal;
   }
+
+  .badge {
+    @apply select-none;
+  }
 }
