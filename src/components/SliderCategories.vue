@@ -28,10 +28,10 @@ const CATEGORIES: Array<Category> = [
     <span
       v-for="(category, index) in CATEGORIES"
       :key="`layout-top-navbar-category-${index}`"
-      class="badge badge-md select-none cursor-pointer carousel-item"
+      class="badge badge-md cursor-pointer carousel-item"
       :class="[
         modelValue == category
-          ? 'bg-black border-black text-white'
+          ? 'bg-accent border-accent text-white'
           : 'text-neutral bg-white border-transparent hover:text-black'
       ]"
       @click="emits('update:modelValue', category)"
